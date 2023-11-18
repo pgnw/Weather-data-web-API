@@ -8,4 +8,6 @@ The API it secured using user accounts which contain an API code used to access 
 
 The data for the application is designed to work with a MongoDB database which contains the weather data and user accounts.
 
+Endpoint documentation: https://pgnw.github.io/Weather-data-web-API/
+
 The project was made using the ASP.NET framework 
