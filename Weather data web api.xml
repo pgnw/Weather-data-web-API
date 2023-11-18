@@ -1,0 +1,195 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Weather data web api</name>
+    </assembly>
+    <members>
+        <member name="M:Weather_data_web_api.Controllers.UserController.GetUsers">
+            <summary>
+            Gets all users from the database.
+            </summary>
+            <remarks>
+            Requires a teacher API key.
+            </remarks>
+            <returns>Returns every user in the database.</returns>
+        </member>
+        <member name="M:Weather_data_web_api.Controllers.UserController.CreateUser(Weather_data_web_api.Models.DTOs.NewUserDTO)">
+            <summary>
+            Creates a new user for accessing the database.
+            </summary>
+            <remarks>
+            Requires a teacher API key.
+            </remarks>
+            <param name="newUser">New user to be added</param>
+            <returns>Returns a status code with information about how the request went.</returns>
+        </member>
+        <member name="M:Weather_data_web_api.Controllers.UserController.DeleteUser(System.String)">
+             <summary>
+             Deletes a new based on id in the database.
+             </summary>
+             <remarks>
+             Requires a teacher API key.
+             </remarks>
+            <param name="id">Id of the user to be deleted</param>
+             <returns>Returns a status code with information about how the request went.</returns>
+        </member>
+        <member name="M:Weather_data_web_api.Controllers.UserController.DeleteInactiveUsers">
+            <summary>
+            Deletes every user that has not used the database in over 30 days.
+            </summary>
+            <remarks>
+            Requires a teacher API key.
+            </remarks>
+            <returns>Returns a status code with information about how the request went.</returns>
+        </member>
+        <member name="M:Weather_data_web_api.Controllers.UserController.Put(System.String,Weather_data_web_api.Models.DTOs.UserBaseDTO)">
+             <summary>
+             Updates the access level of a user, based on their Id.
+             </summary>
+             <remarks>
+             Requires a teacher API key.
+             </remarks>
+            <param name="id">Id of the user to be updated</param>
+            <param name="updatedUserDTO">Data containg information on the update</param>
+             <returns>Returns a status code with information about how the request went.</returns>
+        </member>
+        <member name="M:Weather_data_web_api.Controllers.UserController.UpdateMany(Weather_data_web_api.Models.DTOs.UserPatchDTO)">
+             <summary>
+             Updates several users at once, based on created date.
+             </summary>
+             <remarks>
+             Requires a teacher API key.
+             </remarks>
+            <param name="patchDetail">Data containg information on what users to update and what values to change.</param>
+             <returns>Returns a status code with information about how the request went.</returns>
+        </member>
+        <member name="M:Weather_data_web_api.Controllers.WeatherDataController.Get">
+            <summary>
+            Gets all weather data from the database.
+            </summary>
+            <remarks>
+            Requires a student API key.
+            </remarks>
+            <returns>Returns every weather data document in the database.</returns>
+        </member>
+        <member name="M:Weather_data_web_api.Controllers.WeatherDataController.GetFiltered(Weather_data_web_api.Models.Filter.WeatherDataFilter)">
+             <summary>
+             Gets weather data from the data base that matches the filters provided.
+             </summary>
+             <remarks>
+             Filters include recorded from, recorded to, devicename match, recorded date match and an option to the return the highest temperture document.
+             Requires a student API key.
+             </remarks>
+            <param name="filter">Filter containg information on what documents to filter out.</param>
+             <returns>Returns weather data from the data base that matches the filters provided.</returns>
+        </member>
+        <member name="M:Weather_data_web_api.Controllers.WeatherDataController.Get(System.String)">
+             <summary>
+             Gets weather data from the data base that matches the id provided.
+             </summary>
+             <remarks>
+             Requires a student API key.
+             </remarks>
+            <param name="id">Id of the uer to find.</param>
+             <returns>Returns weather data from the data base that matches the id provided.</returns>
+        </member>
+        <member name="M:Weather_data_web_api.Controllers.WeatherDataController.Post(Weather_data_web_api.Models.DTOs.WeatherDataBaseDTO)">
+            <summary>
+            Adds a new wheather data document.
+            </summary>
+            <param name="createdWeatherData">Document to add.</param>
+            <returns>Returns a status code containing information on how the request went.</returns>
+        </member>
+        <member name="M:Weather_data_web_api.Controllers.WeatherDataController.PostMany(System.Collections.Generic.List{Weather_data_web_api.Models.DTOs.WeatherDataBaseDTO})">
+            <summary>
+            Allows for the creating of multiple weather data entries at once.
+            </summary>
+            <param name="createdWeatherDatas">Weather data entries to be added.</param>
+            <returns>Returns a status code with information about how the request went.</returns>
+        </member>
+        <member name="M:Weather_data_web_api.Controllers.WeatherDataController.Put(System.String,Weather_data_web_api.Models.DTOs.WeatherDataBaseDTO)">
+            <summary>
+            Allows for updating a weather data document based on it's id with a new weather data document.
+            </summary>
+            <param name="id">Id of the docuement to replace.</param>
+            <param name="updatedWeatherData">The document to replace the old one.</param>
+            <returns>Returns a status code with information about how the request went.</returns>
+        </member>
+        <member name="M:Weather_data_web_api.Controllers.WeatherDataController.UpdateMany(Weather_data_web_api.Models.DTOs.WeatherDataPatchDTO)">
+            <summary>
+            Updates multiple weather data documents at once using a series of filter to identify which documents are to be updated. Takes a weather data object to use as a parameter to update any documents matching the filters.
+            </summary>
+            <param name="patchDetails">PatchDetails object containg data on the filters and update values.</param>
+            <returns>Returns a status code with information about how the request went.</returns>
+        </member>
+        <member name="M:Weather_data_web_api.Controllers.WeatherDataController.Delete(System.String)">
+            <summary>
+            Deletes a weather data document based off it's id.
+            </summary>
+            <param name="id">Id of the document to delete.</param>
+            <returns>Returns a status code with information about how the request went.</returns>
+        </member>
+        <member name="M:Weather_data_web_api.Controllers.WeatherDataController.DeleteBasedUponAge(System.Nullable{System.Int32})">
+            <summary>
+            Deletes any documents in the weather data collection that are older than the number given in days.
+            </summary>
+            <param name="days">Any documents older than this many days will be deleted.</param>
+            <returns>Returns a status code with information about how the request went.</returns>
+        </member>
+        <member name="M:Weather_data_web_api.Models.Filter.WeatherDataFilter.isAllNull">
+            <summary>
+            Checks if all the filters in the WeatherDataFilter class are null.
+            </summary>
+            <returns>True if everything is null false otherwise.</returns>
+        </member>
+        <member name="M:Weather_data_web_api.Repositories.UserRepository.RemoveInactive">
+            <summary>
+            Remove any users with a last acessed date over 30 days old.
+            </summary>
+            <returns>returns a operation reponse to let the user know how it went.</returns>
+        </member>
+        <member name="M:Weather_data_web_api.Repositories.UserRepository.GenerateFilterDefinitions(Weather_data_web_api.Models.Filter.UserFilter)">
+            <summary>
+            Generates update definitions based off it a WeatherPatchDTO object.
+            </summary>
+            <param name="updates">WeatherDataPatchDTO containing the filter information and what data to update.</param>
+            <returns>A new update Definition object containing the data and filter for updating.</returns>
+        </member>
+        <member name="M:Weather_data_web_api.Repositories.UserRepository.GenerateUpdateDefinition(Weather_data_web_api.Models.DTOs.UserPatchDTO)">
+            <summary>
+            Generates update definitions based off it a WeatherPatchDTO object.
+            </summary>
+            <param name="updates">UserPatchDTO object containing the filter information and what data to update.</param>
+            <returns>A new update Definition object containing the data and filter for updating.</returns>
+        </member>
+        <member name="M:Weather_data_web_api.Repositories.UserRepository.UpdateLoginTime(System.String,System.DateTime)">
+            <summary>
+            Updates the user who holds the api key given to the login data given.
+            </summary>
+            <param name="apiKey">Api key of the user to update</param>
+            <param name="loginDate">Date to set the last accessed to</param>
+        </member>
+        <member name="M:Weather_data_web_api.Repositories.UserRepository.IsSuitableRole(System.String,Weather_data_web_api.Models.Roles)">
+            <summary>
+            Checks if the user role holds more or equal power than the required role.
+            </summary>
+            <param name="userRole">user role to check</param>
+            <param name="requiredRole">required role to check the user role against</param>
+            <returns></returns>
+        </member>
+        <member name="M:Weather_data_web_api.Repositories.WeatherDataRepository.GenerateFilterDefinitions(Weather_data_web_api.Models.Filter.WeatherDataFilter)">
+            <summary>
+            Generates FilterDefinitions from a WeatherDataFilter instance.
+            </summary>
+            <param name="weatherDataFilter">The filter object to base the FilterDefinitions from</param>
+            <returns>FilterDefinitions based off of the WeatherDataFilter provided</returns>
+        </member>
+        <member name="M:Weather_data_web_api.Repositories.WeatherDataRepository.GenerateUpdateDefinition(Weather_data_web_api.Models.DTOs.WeatherDataPatchDTO)">
+            <summary>
+            Generates update definitions based off it a WeatherPatchDTO object.
+            </summary>
+            <param name="updates">WeatherDataPatchDTO containing the filter information and what data to update.</param>
+            <returns>A new update Definition object containing the data and filter for updating.</returns>
+        </member>
+    </members>
+</doc>
