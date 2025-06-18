@@ -50,7 +50,7 @@ Built with an **ASP.NET** backend and powered by a **MongoDB** database, this pr
    git clone https://github.com/your-username/Weather-data-web-API.git
    cd Weather-data-web-API
    
-2. **Configure Database
+2. **Configure Database**
 
 Start your MongoDB server/cluster.
 
