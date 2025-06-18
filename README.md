@@ -1,6 +1,7 @@
 # 🌦️ Weather Data Web API
 
-A **RESTful API** for managing and querying weather data, developed as part of my studies at TAFE. This project integrates an **ASP.NET** backend with a **MongoDB** database to deliver efficient data handling and robust authentication.
+A **RESTful API** for managing and querying weather data.
+This project integrates an **ASP.NET** backend with a **MongoDB** database to deliver efficient data handling and robust authentication.
 
 ---
 
