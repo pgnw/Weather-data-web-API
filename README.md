@@ -17,14 +17,14 @@ Built with an **ASP.NET** backend and powered by a **MongoDB** database, this pr
 
 ### 🔒 Authentication
 - **Secure Endpoints:** Users authenticate using API keys.
-- **Access Levels:** Role-based access controls which define endpoint permissions.
+- **Access Levels:** Role-based access control defines endpoint permissions.
 
 ### 💾 Database
 - Powered by **MongoDB**, optimized for handling large weather datasets and user accounts.
 
 ### 📄 Documentation
-- Comprehensive API documentation is available via **Swagger**.
-- View it here: [API Docs](https://pgnw.github.io/Weather-data-web-API/).
+- Comprehensive API documentation available via **Swagger**.  
+- View it here: [API Docs](https://pgnw.github.io/Weather-data-web-API/)
 
 ---
 
