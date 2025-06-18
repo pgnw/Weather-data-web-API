@@ -39,9 +39,8 @@ Built with an **ASP.NET** backend and powered by a **MongoDB** database, this pr
 ## 🚀 Getting Started
 
 ### ✅ Prerequisites
-- **ASP.NET Core SDK** (vX.X.X or higher)
-- **MongoDB** (vX.X.X or higher)
-- API testing tools like **Postman** or **cURL**
+- **ASP.NET Core SDK** (v6.0.100 or higher)
+- **MongoDB** (v3.6 or higher)
 
 ### ⚙️ Installation
 
