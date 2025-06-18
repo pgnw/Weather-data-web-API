@@ -46,7 +46,7 @@ Built with an **ASP.NET** backend and powered by a **MongoDB** database, this pr
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/your-username/Weather-data-web-API.git
+   git clone https://github.com/pgnw/Weather-data-web-API.git
    cd Weather-data-web-API
    
 2. **Configure Database**
