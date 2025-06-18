@@ -28,7 +28,3 @@ Authentication: Protect endpoints using API keys or tokens.
 Database: Uses MongoDB for handling large datasets.
 
 Documentation: API documentation available via Swagger.
-
-License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
