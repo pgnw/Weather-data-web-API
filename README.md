@@ -1,30 +1,63 @@
-# Weather-data-web-API
-Weather data web API created while studying at TAFE.
+# 🌦️ Weather Data Web API
 
-This project is a REST API application that integrates with a MongoDB database.
-It offers functionalities through it's API endpoints, enabling users to read and manipulate weather data records.
+A **RESTful API** for managing and querying weather data, developed as part of my studies at TAFE. This project integrates an **ASP.NET** backend with a **MongoDB** database to deliver efficient data handling and robust authentication.
 
-The API it secured using user accounts which contain an API code used to access the endpoints and an access level which decides which endpoints can be used.
+---
 
-The data for the application is designed to work with a MongoDB database which contains the weather data and user accounts.
+## ✨ Features
 
-Endpoint documentation: https://pgnw.github.io/Weather-data-web-API/
+### 🔍 Data Operations
+- **CRUD Functionality:** Create, Read, Update, and Delete weather records.
+- **Advanced Queries:** Filter by:
+  - Date
+  - Location
+  - Temperature range
+  - And more!
 
-The project was made using the ASP.NET framework 
+### 🔒 Authentication
+- **Secure Endpoints:** Users authenticate using API keys.
+- **Access Levels:** Role-based access controls which define endpoint permissions.
 
+### 💾 Database
+- Powered by **MongoDB**, optimized for handling large weather datasets and user accounts.
 
-# Overview
+### 📄 Documentation
+- Comprehensive API documentation is available via **Swagger**.
+- View it here: [API Docs](https://pgnw.github.io/Weather-data-web-API/).
 
-This project is a REST API for managing and querying weather data. It allows users to store, retrieve, and manipulate weather information efficiently.
+---
 
-Features
+## 🛠️ Tech Stack
+- **Framework:** ASP.NET
+- **Database:** MongoDB
+- **Authentication:** API keys/tokens with role-based access control
+- **Documentation Tool:** Swagger
 
-Basic Operations: Create, Read, Update, and Delete weather data records.
+---
 
-Data Queries: Filter data by date, location, temperature range, and more.
+## 🚀 Getting Started
 
-Authentication: Protect endpoints using API keys or tokens.
+### ✅ Prerequisites
+- **ASP.NET Core SDK** (vX.X.X or higher)
+- **MongoDB** (vX.X.X or higher)
+- API testing tools like **Postman** or **cURL**
 
-Database: Uses MongoDB for handling large datasets.
+### ⚙️ Installation
 
-Documentation: API documentation available via Swagger.
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/your-username/Weather-data-web-API.git
+   cd Weather-data-web-API
+   
+2. **Configure Database
+
+Start your MongoDB server/cluster.
+
+Open `appsettings.json` and update the `ConnectionStrings:MongoDb` entry to your MongoDB URI.
+
+## Run the Application
+
+```bash
+dotnet run
+```
+Open your browser to http://localhost:5000/api/swagger to view and test all endpoints via Swagger UI.
